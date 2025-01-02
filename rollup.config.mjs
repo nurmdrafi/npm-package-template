@@ -3,6 +3,7 @@ import resolve from "@rollup/plugin-node-resolve";
 import typescript from "@rollup/plugin-typescript";
 import dts from "rollup-plugin-dts";
 import postcss from "rollup-plugin-postcss";
+import external from 'rollup-plugin-peer-deps-external';
 const packageJson = require("./package.json");
 
 export default [
@@ -31,7 +32,9 @@ export default [
         exclude: ["**/*.test.tsx", "**/*.test.ts", "**/*.stories.ts"],
       }),
       postcss({ extensions: [".css"], inject: true, extract: false }),
+      external()
     ],
+    external: ["react", "react-dom", "react-bkoi-gl"],
   },
   {
     input: "dist/esm/types/index.d.ts",

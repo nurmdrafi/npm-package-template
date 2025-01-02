@@ -9,7 +9,7 @@ import { useMap } from '../contexts/hooks/useMap'
 
 // Import Styles
 // @ts-ignore
-import "react-bkoi-gl/styles"
+// import "react-bkoi-gl/styles"
 
 const BarikoiMap: React.FC<BarikoiMapPropsType> = ({apiKey, initialViewState, controls, mapStyle}) => {
   const {centerPoint} = useMap()
