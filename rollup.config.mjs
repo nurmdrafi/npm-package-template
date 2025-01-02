@@ -8,20 +8,18 @@ const packageJson = require("./package.json");
 
 export default [
   {
-    preserveModules: true,
     input: "src/index.ts",
     output: [
       {
         file: packageJson.main,
         format: "cjs",
         sourcemap: true,
-        inlineDynamicImports: true,
       },
       {
         file: packageJson.module,
         format: "esm",
         sourcemap: true,
-        inlineDynamicImports: true,
+        // inlineDynamicImports: true,
       },
     ],
     plugins: [

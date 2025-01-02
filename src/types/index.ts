@@ -38,8 +38,8 @@ export type BarikoiMapPropsType = {
 export type AutocompleteContextType = {
   searchedPlace: string;
   setSearchedPlace: (place: string) => void;
-  selectedPlace: string;
-  setSelectedPlace: (place: string) => void;
+  selectedPlace: any;
+  setSelectedPlace: (place: any) => void;
   suggestions: any[];
   setSuggestions: (suggestions: any[]) => void;
   isAutocompleteLoading: boolean;
@@ -54,14 +54,6 @@ export type MapContextType = {
   setCenterPoint: (center: { lat: number; lng: number }) => void;
   markerData: any[];
   setMarkerData: (markerData: any[]) => void;
-};
-
-// Drawing Context
-export type DrawingContextType = {
-  isDrawingEnabled: boolean;
-  setIsDrawingEnabled: (enabled: boolean) => void;
-  drawingMode: string;
-  setDrawingMode: (mode: string) => void;
 };
 
 // Combined Context
